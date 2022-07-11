@@ -1,21 +1,17 @@
 <script>
-	import { profile_info } from "../_private/personal.js"
-
+	//Private .js file that can contain information as needed.
+	import { profile_info, social_medias } from "../_private/personal.js"
 	import ProfileCard from "../components/ProfileCard.svelte";
-	import SocialMediaPanel from "../components/SocialMediaPanel.svelte";
-
-
-
-
+	import SocialMediaPanel from "../components/socials/SocialMediaPanel.svelte";
 </script>
 
 <style>
 </style>
 
 
-<div class="columns-2 container mx-auto">
-	<ProfileCard />
-	<SocialMediaPanel />
+<div class="">
+	<ProfileCard info={profile_info}/>
+	<SocialMediaPanel {social_medias}/>
 </div>
 
 
