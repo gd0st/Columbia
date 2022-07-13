@@ -9,6 +9,12 @@ module.exports = {
 	},
 	colors: {
 		'purple': colors.purple,
+
+		'social': {
+			'discord': '#7289DA',
+			'instagram': '#EA0C5F',
+			'linkedin': '#0077B5'
+		}
 	}
   },
   plugins: [],

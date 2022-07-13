@@ -11,10 +11,14 @@
 </script>
 <style>
 
+	h1, p, a {
+		text-align: center;
+	}
+
 </style>
 
 
-<div class="bg-purple-400">
+<div class="container mx-auto bg-purple-400">
 	<section>
 		<h1>{info.name}</h1>
 		<p>{info.profession.location}</p>

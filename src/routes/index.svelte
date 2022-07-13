@@ -6,10 +6,14 @@
 </script>
 
 <style>
+
+	div {
+		text-align:center;
+	}
 </style>
 
 
-<div class="">
+<div class="container mx-auto border-2 grid grid-cols-1 gap-4 place-content-center">
 	<ProfileCard info={profile_info}/>
 	<SocialMediaPanel {social_medias}/>
 </div>

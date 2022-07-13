@@ -10,12 +10,16 @@
 </script>
 
 <style>
+
+	div {
+		text-align:center;
+	}
+
 </style>
 
 
-<div class="bg-purple-200">
-	{#each social_medias as social_media}
-		<SocialMediaCard {social_media}/>
-	{/each}
-
+<div class="flex flex-row justify-center space-x-3">
+		{#each social_medias as social_media}
+			<SocialMediaCard {social_media}/>
+		{/each}
 </div>
