@@ -10,4 +10,4 @@
 </style>
 
 
-<h1 class="p-5 bg-purple-400">Yannick Dorn</h1>
+<img height="48px" width="48px" src="logo-placeholder.svg"/>

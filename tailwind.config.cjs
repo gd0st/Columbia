@@ -13,7 +13,8 @@ module.exports = {
 		'social': {
 			'discord': '#7289DA',
 			'instagram': '#EA0C5F',
-			'linkedin': '#0077B5'
+			'linkedin': '#0077B5',
+			'twitter': '#00ACEE'
 		}
 	}
   },

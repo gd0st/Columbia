@@ -4,13 +4,9 @@
 		name: "Instagram",
 		profile_username: "Tyler1",
 		profile_hyperlink: "https://instagram.com/tyler1_alpha",
+		
 	}
-
-	let bg = {
-		'instagram': 'bg-social-instagram',
-		'discord': 'bg-social-discord',
-		'linkedin': 'bg-social-linkedin'
-	}
+	let bg = `bg-social-${social_media.name.toLowerCase()}`
 
 	
 </script>
@@ -26,7 +22,7 @@
 
 
 <a href="{social_media.profile_hyperlink}">
-	<div class="hover:subpixel-antialised {bg[social_media.name.toLowerCase()]} px-2 py-1 flex justify-center items-center flex-row space-x-2 rounded hover:brightness-125">
+	<div class="hover:subpixel-antialised {bg} px-2 py-1 flex justify-center items-center flex-row space-x-2 rounded hover:brightness-125">
 		<Icon icon={social_media.name.toLowerCase()}/>
 		<p class="font-medium antialiased whitespace-nowrap" >{social_media.profile_username}</p>
 	</div>

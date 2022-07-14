@@ -1,4 +1,5 @@
 <script>
+	import Logo from "./Logo.svelte"
 	export let links = [
 		{
 			displayTitle: 'home',
@@ -20,10 +21,10 @@
 </style>
 
 
-<nav class="flex flex-row">
-		<ul class="flex flex-row">
+<nav class="flex flex-row justify-center space-x-3">
+		<ul>
 			{#each links as link}
-				<li class="bg-purple-400 bases-1/4 p-5">
+				<li class="bg-purple-400">
 					<a href="{link.link}">{link.displayTitle}</a>
 				</li>
 			{/each}
