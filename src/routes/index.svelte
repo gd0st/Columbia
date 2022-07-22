@@ -15,10 +15,10 @@
 
 <div class="container mx-auto">
 	<div class="grid grid-cols-2">
-		<div class="flex flex-row">
+		<div class="grid grid-cols-2 place-items-center mt-8">
 			<ProfileCard {profileInfo}/>
 		</div>
-		<SocialMediaPanel {socialMedias}/>
+		<!-- <SocialMediaPanel {socialMedias}/> -->
 	</div>
 
 </div>
