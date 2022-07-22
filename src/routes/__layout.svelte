@@ -13,6 +13,6 @@
 
 
 <Navigator class="mb-2" />
-<main class="grid grid-cols-3 gap-x-2 mx-8">
+<main class="">
 	<slot></slot>
 </main>

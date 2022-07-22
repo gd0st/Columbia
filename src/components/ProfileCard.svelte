@@ -1,28 +1,33 @@
 <script>
-	export let info = {
+	export let profileInfo = {
 		name: "Spike Spiegel",
 		profession: {
 			company: "Bebop",
 			position: "Bounty Hunter",
 			location: "Space",
-			company_hyperlink: "https://github.com/2mill"
-		}
+			companyHyperlink: "https://github.com/2mill"
+		},
+		skills : [
+			"First Skill",
+			"Second Skill etc...",
+		],
+		description: "Lorem Ipsum"
+
 	}
 </script>
 <style>
 
-	h1, p, a {
-		text-align: center;
-	}
 
 </style>
 
 
-<div class="container mx-auto bg-purple-400">
-	<section>
-		<h1>{info.name}</h1>
-		<p>{info.profession.location}</p>
-		<p>{info.profession.position}</p>
-		<a href="{info.profession.company_hyperlink}">{info.profession.company}</a>
-	</section>
+<div>
+	<img src="spike.png" alt="Profile Photo"/>
+</div>
+<div>
+	<h1>{profileInfo.name}</h1>
+	<p>{profileInfo.profession.location}</p>
+	<p>{profileInfo.profession.position}</p>
+	<a href="{profileInfo.profession.companyHyperlink}"><p>{profileInfo.profession.company}</p></a>
+
 </div>
