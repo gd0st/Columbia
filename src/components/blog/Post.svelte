@@ -7,5 +7,4 @@
 
 </style>
 
-Hello Again!
 {@html convertMarkdown(path).html}
