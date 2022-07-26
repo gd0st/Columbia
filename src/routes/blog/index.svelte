@@ -1,10 +1,20 @@
 <script>
 
-
+	import Post from "../../components/blog/Post.svelte"
+	// let posts_map = fileNames.map()
 </script>
 
 <style>
 
+	h1 {
+		background-color: purple;
+	}
+
+	:global(h1) {
+		background-color: purple;
+	}
+
 </style>
 
-<h1>Under Construction :)</h1>
+<Post />
+
