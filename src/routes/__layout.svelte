@@ -8,12 +8,11 @@
 
 <style>
 
-	
 </style>
 
 
 
-
-<Logo/>
-<Navigator/>
-<slot></slot>
+<Navigator class="mb-2" />
+<main class="">
+	<slot></slot>
+</main>
