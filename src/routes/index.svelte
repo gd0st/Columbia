@@ -13,11 +13,13 @@
 
 </style>
 
+<svelte:head>
+	<title>Main</title>
+</svelte:head>
+
 <div class="container mx-auto">
-	<div class="grid grid-cols-2">
-		<div class="grid grid-cols-2 place-items-center mt-8">
-			<ProfileCard {profileInfo}/>
-		</div>
+	<div class="grid grid-cols-3 my-5">
+		<ProfileCard {profileInfo}/>
 		<!-- <SocialMediaPanel {socialMedias}/> -->
 	</div>
 

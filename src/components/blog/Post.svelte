@@ -1,9 +1,10 @@
 <script>
 	import { convertMarkdown } from "./utils.js"
 	export let path = "./posts/first.md"
-</script>
 
+</script>
 <style>
+/* TODO: apply styles to embedded HTML */
 
 </style>
 

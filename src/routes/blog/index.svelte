@@ -1,7 +1,7 @@
 <script>
 
 	import glob from 'glob'
-import Post from '../../components/blog/Post.svelte';
+	import Post from '../../components/blog/Post.svelte';
 	let fileNames = glob.sync(`./posts/*.md`);
 
 	//DO NOT TOUCH THIS
@@ -17,9 +17,6 @@ import Post from '../../components/blog/Post.svelte';
 		background-color: purple;
 	}
 
-	:global(h1) {
-		background-color: purple;
-	}
 
 </style>
 
