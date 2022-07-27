@@ -12,7 +12,7 @@
 
 
 
-<Navigator class="mb-2" />
+<Navigator class="" />
 <main class="">
 	<slot></slot>
 </main>
