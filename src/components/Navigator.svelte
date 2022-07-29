@@ -5,14 +5,14 @@
 			displayTitle: 'home',
 			link: '/'
 		},
-		{
-			displayTitle: 'blog',
-			link: '/blog'
-		},
-		{
-			displayTitle: 'projects',
-			link: '/projects'
-		}
+		// {
+		// 	displayTitle: 'blog',
+		// 	link: '/blog'
+		// },
+		// {
+		// 	displayTitle: 'projects',
+		// 	link: '/projects'
+		// }
 	];
 </script>
 
