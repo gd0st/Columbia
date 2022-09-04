@@ -1,8 +1,8 @@
 <script>
 	//Private .js file that can contain information as needed.
-	import { profileInfo, socialMedias} from "../_private/personal.js"
-	import ProfileCard from "../components/ProfileCard.svelte";
-	import SocialMediaPanel from "../components/socials/SocialMediaPanel.svelte";
+	// import { profileInfo, socialMedias} from "../_private/personal.js"
+	// import ProfileCard from "../components/ProfileCard.svelte";
+	// import SocialMediaPanel from "../components/socials/SocialMediaPanel.svelte";
 </script>
 
 <style>
@@ -19,7 +19,9 @@
 
 <div class="container mx-auto">
 	<div class="grid grid-cols-3 my-5">
-		<ProfileCard {profileInfo}/>
+
+		Hello World!
+		<!-- <ProfileCard {profileInfo}/> -->
 		<!-- <SocialMediaPanel {socialMedias}/> -->
 	</div>
 
