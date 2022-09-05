@@ -1,8 +1,8 @@
 <script>
-	import "../app.css"
+	import "../app.css";
+	import Navigator from "../components/Navigator.svelte";
 </script>
-
-<h1>"Hello world!"</h1>
+<Navigator/>
 
 <slot></slot>
 
