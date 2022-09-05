@@ -5,18 +5,10 @@
 			displayTitle: 'home',
 			link: '/'
 		},
-		// {
-		// 	displayTitle: 'blog',
-		// 	link: '/blog'
-		// },
-		// {
-		// 	displayTitle: 'projects',
-		// 	link: '/projects'
-		// }
 	];
 </script>
 <nav class="flex w-screen my-4">
-	<ul class="flex-1 flex justify-center">
+	<ul class="flex-1 flex">
 		{#each links as link}
 			<li class="cols-span-1 mx-5">
 				<a href={link.link} class="text-xl">{link.displayTitle}</a>
@@ -56,7 +48,7 @@
 		opacity: 0;
 	}
 	a:hover {
-		background: rgba(100, 109, 99, 0.1);
+		/* background: rgba(100, 109, 99, 0.1); */
 		transition: all 0.1s ease-out;
 		/* padding: 2px 8px; */
 	}

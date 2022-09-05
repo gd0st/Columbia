@@ -2,7 +2,7 @@
 	//Private .js file that can contain information as needed.
 	// import { profileInfo, socialMedias} from "../_private/personal.js"
 	import ProfileCard from "../components/ProfileCard.svelte";
-	import Navigator from "../components/Navigator.svelte";
+	import Icon from "../components/Icon.svelte"
 	// import SocialMediaPanel from "../components/socials/SocialMediaPanel.svelte";
 	export let data
 </script>
@@ -20,10 +20,20 @@
 </svelte:head>
 
 <div class="container mx-auto">
-	<div class="grid grid-cols-3 my-5">
-
+	<div class="grid grid-cols-1 place-items-center my-5 border">
 		<ProfileCard profileInfo={data.profile}/>
 		<!-- <SocialMediaPanel {socialMedias}/> -->
+		<ul class="flex flex-row gap-4 border place-items-center">
+			{#each data.socialLinks as link}
+
+				<li class="border">
+					<a href="{link.link}">
+						<Icon faSource={link.fa_icon}/>
+					</a>
+				</li>
+			{/each}
+		</ul>
 	</div>
 </div>
-<Navigator links={data.links}/>
+
+

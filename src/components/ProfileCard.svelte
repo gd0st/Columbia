@@ -24,8 +24,8 @@
 
 
 <div></div>
-<div class="flex flex-row font-bold text-xl place-items-center">
-	<img class="object-contain h-48 w-96"src="{profileInfo.profilePhotoLink}" alt="Profile Photo"/>
+<div class="grid gap-2 grid-cols-2  font-bold text-xl place-items-center">
+	<img class="object-contain h-48 px-auto "src="{profileInfo.profilePhotoLink}" alt="Profile Photo"/>
 	<div class="whitespace-nowrap">
 		<h1>{profileInfo.name}</h1>
 		<p>{profileInfo.profession.location}</p>
