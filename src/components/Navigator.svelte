@@ -15,7 +15,6 @@
 		// }
 	];
 </script>
-
 <nav class="flex w-screen my-4">
 	<ul class="flex-1 flex justify-center">
 		{#each links as link}
