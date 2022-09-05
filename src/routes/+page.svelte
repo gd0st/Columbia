@@ -1,0 +1,39 @@
+<script>
+	//Private .js file that can contain information as needed.
+	// import { profileInfo, socialMedias} from "../_private/personal.js"
+	import ProfileCard from "../components/ProfileCard.svelte";
+	import Icon from "../components/Icon.svelte"
+	// import SocialMediaPanel from "../components/socials/SocialMediaPanel.svelte";
+	export let data
+</script>
+
+<style>
+	/* main { 
+		display: grid;
+		grid-template-columns: 2fr 1fr;
+	} */
+
+</style>
+
+<svelte:head>
+	<title>Main</title>
+</svelte:head>
+
+<div class="container mx-auto">
+	<div class="grid grid-cols-1 place-items-center my-5 border">
+		<ProfileCard profileInfo={data.profile}/>
+		<!-- <SocialMediaPanel {socialMedias}/> -->
+		<ul class="flex flex-row gap-4 border place-items-center">
+			{#each data.socialLinks as link}
+
+				<li class="border">
+					<a href="{link.link}">
+						<Icon faSource={link.fa_icon}/>
+					</a>
+				</li>
+			{/each}
+		</ul>
+	</div>
+</div>
+
+

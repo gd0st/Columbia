@@ -7,3 +7,4 @@ node_modules
 .env.*
 !.env.example
 /src/_private/*.js
+profile_config.*

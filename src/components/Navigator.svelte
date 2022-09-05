@@ -1,23 +1,14 @@
 <script>
-	import Logo from './Logo.svelte';
+	// import Logo from './Logo.svelte';
 	export let links = [
 		{
 			displayTitle: 'home',
 			link: '/'
 		},
-		// {
-		// 	displayTitle: 'blog',
-		// 	link: '/blog'
-		// },
-		// {
-		// 	displayTitle: 'projects',
-		// 	link: '/projects'
-		// }
 	];
 </script>
-
 <nav class="flex w-screen my-4">
-	<ul class="flex-1 flex justify-center">
+	<ul class="flex-1 flex">
 		{#each links as link}
 			<li class="cols-span-1 mx-5">
 				<a href={link.link} class="text-xl">{link.displayTitle}</a>
@@ -28,7 +19,7 @@
 
 <style>
 	/**a tag styles by: https://codepen.io/mds/pen/dgRJoZ */
-	/**Minor adjustments were made*/
+	/**Minor color adjustments were made*/
 	a {
 		color: black;
 		text-decoration: none;
@@ -57,7 +48,7 @@
 		opacity: 0;
 	}
 	a:hover {
-		background: rgba(100, 109, 99, 0.1);
+		/* background: rgba(100, 109, 99, 0.1); */
 		transition: all 0.1s ease-out;
 		/* padding: 2px 8px; */
 	}
