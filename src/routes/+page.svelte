@@ -20,13 +20,12 @@
 </svelte:head>
 
 <div class="container mx-auto">
-	<div class="grid grid-cols-1 place-items-center my-5 border">
+	<div class="grid grid-cols-1 place-items-center my-5 ">
 		<ProfileCard profileInfo={data.profile}/>
 		<!-- <SocialMediaPanel {socialMedias}/> -->
-		<ul class="flex flex-row gap-4 border place-items-center">
+		<ul class="flex flex-row gap-4 place-items-center">
 			{#each data.socialLinks as link}
-
-				<li class="border">
+				<li class="">
 					<a href="{link.link}">
 						<Icon faSource={link.fa_icon}/>
 					</a>
