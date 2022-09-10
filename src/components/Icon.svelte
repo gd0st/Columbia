@@ -5,8 +5,8 @@
 
 <style></style>
 
-<svlete:head>
+<svelte:head>
 	<script src="https://kit.fontawesome.com/3d1b5ebdca.js" crossorigin="anonymous"></script>
-</svlete:head>
+</svelte:head>
 
 <i class="{faSource} fa-3x"></i>
