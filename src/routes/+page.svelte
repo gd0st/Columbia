@@ -3,8 +3,11 @@
 	// import { profileInfo, socialMedias} from "../_private/personal.js"
 	import ProfileCard from "../components/ProfileCard.svelte";
 	import Icon from "../components/Icon.svelte"
-	// import SocialMediaPanel from "../components/socials/SocialMediaPanel.svelte";
+	import ReCaptcha from "../components/ReCaptcha.svelte";
 	export let data
+
+
+
 </script>
 
 <style>
@@ -34,5 +37,7 @@
 		</ul>
 	</div>
 </div>
+
+<ReCaptcha sitekey={data.recaptcha_site}/>
 
 

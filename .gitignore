@@ -8,3 +8,4 @@ node_modules
 !.env.example
 /src/_private/*.js
 profile_config.*
+site_keys.js
