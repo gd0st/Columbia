@@ -3,6 +3,7 @@
 	// import { profileInfo, socialMedias} from "../_private/personal.js"
 	import ProfileCard from "../components/ProfileCard.svelte";
 	import Icon from "../components/Icon.svelte"
+	import Skills from "../components/Skills/Skills.svelte"
 	import ReCaptcha from "../components/ReCaptcha.svelte";
 	export let data
 
@@ -38,6 +39,8 @@
 	</div>
 </div>
 
-<ReCaptcha sitekey={data.recaptcha_site}/>
+<Skills/>
+
+<!-- <ReCaptcha sitekey={data.recaptcha_site}/> -->
 
 
