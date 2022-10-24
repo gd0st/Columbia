@@ -1,8 +1,8 @@
 <script lang="ts">
-	import { xlink_attr } from "svelte/internal";
-	import type { SkillInterface } from "../../lib/skills"
-	import  Skill  from "./Skill.svelte"
-	export let skills: SkillInterface[]
+	import { xlink_attr } from 'svelte/internal';
+	import type { SkillInterface } from '../../lib/skills';
+	import Skill from './Skill.svelte';
+	export let skills: SkillInterface[];
 
 	// let skillCategories: string[] = skills.map(
 	// 	skill => skill.category
@@ -14,24 +14,13 @@
 	// 	)
 	// )
 
-	let colors = [
-		"blue",
-		"teal",
-		"violet",
-		"fuchisa"
-	]
+	let colors = ['blue', 'teal', 'violet', 'fuchisa'];
 
-	colors = colors.map(
-		color => `bg-${color}-500`
-	);
-
-
+	colors = colors.map((color) => `bg-${color}-500`);
 </script>
 
-
-<style></style>
-
 {#each skills as skill}
-		<Skill {skill}/>
+	<Skill {skill} />
 {/each}
+
 
