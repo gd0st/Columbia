@@ -1,18 +1,26 @@
 <script lang="ts">
 	import type { SkillInterface } from '../../lib/skills';
+	import {githubEndpoint} from '../../lib/skills'
 	import Icon from '../Icon.svelte';
 	export let skill: SkillInterface;
+
+	let link: string = "#"
+
+	if (skill.github) {
+		link = githubEndpoint(skill.name.toLowerCase())
+	}
+
 </script>
 
-<a href="#">
-	<div class="bg-blue-500 my-5">
+<a href="{link}">
+	<div class="">
 		<button class="learn-more">
 			<Icon faSource={skill.icon} />
 		</button>
 	</div>
 </a>
 
-<style lang="scss">
+<!-- <style lang="scss">
 
 	.golang {
 		background-color: #29beb0;
@@ -24,12 +32,12 @@
 
 	//Button CSS by Kath Kato on codepen.
 	$bg: #fff;
-	$text: #382b22;
-	$light-pink: #fff0f0;
-	$pink: #ffe9e9;
-	$dark-pink: #f9c4d2;
-	$pink-border: #b18597;
-	$pink-shadow: #ffe3e2;
+	$text: #fff;
+	$light-pink: #4d4d4d;
+	$pink: #111111;
+	$dark-pink: #000000;
+	$pink-border: #1e1e1e;
+	$pink-shadow: #3c3c3c;
 	button {
 		position: relative;
 		display: inline-block;
@@ -85,4 +93,4 @@
 			}
 		}
 	}
-</style>
+</style> -->

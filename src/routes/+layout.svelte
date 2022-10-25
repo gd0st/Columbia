@@ -2,7 +2,14 @@
 	import "../app.css";
 	import Navigator from "../components/Navigator.svelte";
 </script>
-<Navigator/>
+	<Navigator/>
+	<slot></slot>
+<style>
 
-<slot></slot>
+	:global(body) {
+		background-color: black;
+	}
+
+
+</style>
 

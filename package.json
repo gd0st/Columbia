@@ -28,7 +28,9 @@
 	"dependencies": {
 		"front-matter": "^4.0.2",
 		"marked": "^4.1.0",
+		"node-sass": "^7.0.3",
 		"remark-parse": "^10.0.1",
+		"sass": "^1.55.0",
 		"unified": "^10.1.2"
 	}
 }

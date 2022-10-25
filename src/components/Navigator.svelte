@@ -21,7 +21,7 @@
 	/**a tag styles by: https://codepen.io/mds/pen/dgRJoZ */
 	/**Minor color adjustments were made*/
 	a {
-		color: black;
+		color:#fff;
 		text-decoration: none;
 		position: relative;
 		padding: 2px 2px;
@@ -31,7 +31,7 @@
 		content: ' ';
 		width: 100%;
 		height: 1px;
-		background: black;
+		background: #fff;
 		position: absolute;
 		right: 0;
 		bottom: 0;
@@ -41,7 +41,7 @@
 		content: ' ';
 		width: 4px;
 		height: 4px;
-		background: black;
+		background: #fff;
 		position: absolute;
 		right: -4px;
 		bottom: 0;
