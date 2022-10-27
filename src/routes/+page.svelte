@@ -1,53 +1,33 @@
 <script lang="ts">
 	//Private .js file that can contain information as needed.
 	// import { profileInfo, socialMedias} from "../_private/personal.js"
-	import ProfileCard from '../components/ProfileCard.svelte';
-	import Icon from '../components/Icon.svelte';
-	import Skills from '../components/Skills/Skills.svelte';
-	import ReCaptcha from '../components/ReCaptcha.svelte';
-	import { skills, type SkillInterface } from '../lib/skills';
-	import { getCategories, filterForCategory } from '../lib/skills';
-	export let data;
-	let catgories = getCategories(skills);
-	function gridCols(arrayLength: SkillInterface[]): number {
-		if (arrayLength.length < 3) return arrayLength.length
-		return 3 
-	}
+
 </script>
 
 <svelte:head>
-	<title>Main</title>
+	<title>Yannick Dorn</title>
 </svelte:head>
 
-<div class="container mx-auto bg-[#4d4d4d] text-white rounded">
-	<div class="grid grid-cols-1 place-items-center my-5 ">
-		<ProfileCard profileInfo={data.profile} />
-		<!-- <SocialMediaPanel {socialMedias}/> -->
-		<ul class="flex flex-row gap-4 place-items-center">
-			{#each data.socialLinks as link}
-				<li class="">
-					<a href={link.link}>
-						<Icon faSource={link.fa_icon} />
-					</a>
-				</li>
-			{/each}
-		</ul>
+
+<div class="flex flex-col h-screen w-2/6 items-center text-[#e0e1dd] border mx-auto mt-1/2">
+	<div class="pb-3 pt-10">
+		<h1 class="text-4xl font-pressstart text-center">Yannick Dorn</h1> 
 	</div>
+	<div class="square-color h-4/5 border w-full">
+		<div class="font-inconsolata">
+			<p class="pb-1">Hi,</p>
+			<p class="p-1">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est soluta eum rem labore quis excepturi, ducimus nesciunt harum totam veniam libero saepe repudiandae consequuntur minus sint sequi! Perspiciatis, at. A!</p>
+			<p class="p-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, architecto repudiandae. Quasi voluptate laboriosam placeat voluptatum error, perferendis inventore aperiam beatae fugiat aspernatur. Dicta rerum ut mollitia nisi beatae totam!</p>
+			<p class="p-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt explicabo sequi dignissimos! Explicabo deleniti rerum vitae pariatur soluta voluptatibus. Reprehenderit a voluptates doloremque voluptate aspernatur animi, deleniti nemo eos. Reiciendis.</p>
+		</div>
+	</div>
+
 </div>
 
-<!-- <ReCaptcha sitekey={data.recaptcha_site}/> -->
+<style>
+	.square-color {
+		background-color: #1B263B; 
+	}
 
-<!-- <div class="container mx-auto bg-[#4d4d4d] text-white rounded">
-	{#each catgories as category}
-		<h1 class="text-center">{category}</h1>
-		<div class="grid grid-cols-3  place-items-center">
-			{#if gridCols(skills) == 1}
-			<div></div>
-			{/if}
-			<Skills skills={filterForCategory(skills, category)} />
-			{#if gridCols(skills) == 1}
-			<div>{gridCols(skills)}</div>
-			{/if}
-		</div>
-	{/each}
-</div> -->
+</style>
+
