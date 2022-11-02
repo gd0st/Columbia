@@ -1,6 +1,5 @@
 <script lang="ts">
 	export let faSource = 'github'
-	export let fontSize = ""
 </script>
 
 
@@ -10,6 +9,4 @@
 	<script src="https://kit.fontawesome.com/3d1b5ebdca.js" crossorigin="anonymous"></script>
 </svelte:head>
 
-<span style="font-size: {fontSize};">
-	<i class="{faSource}"></i>
-</span>
+<i class="{faSource}"></i>
