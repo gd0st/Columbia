@@ -1,34 +1,18 @@
 <script lang="ts">
-	import type { SkillInterface } from '../../lib/skills';
-	import {githubEndpoint} from '../../lib/skills'
-	import Icon from '../Icon.svelte';
-	export let skill: SkillInterface;
-
-	let link: string = "#"
-
-	if (skill.github) {
-		link = githubEndpoint(skill.name.toLowerCase())
-	}
-
+	import Icon from './Icon.svelte';
+	export let icon = "fa-regular fa-notdef";
+	export let link = "example.org"
 </script>
 
 <a href="{link}">
 	<div class="">
 		<button class="learn-more">
-			<Icon faSource={skill.icon} />
+			<Icon faSource={icon} />
 		</button>
 	</div>
 </a>
 
-<!-- <style lang="scss">
-
-	.golang {
-		background-color: #29beb0;
-	}
-	.javascript {
-		background-color: #f0db4f;
-	}
-
+<style lang="scss">
 
 	//Button CSS by Kath Kato on codepen.
 	$bg: #fff;
@@ -93,4 +77,4 @@
 			}
 		}
 	}
-</style> -->
+</style>

@@ -3,40 +3,14 @@
 	// import { profileInfo, socialMedias} from "../_private/personal.js"
 
 	import Icon from "../components/Icon.svelte"
-	import { content } from "../content/about.js"
+	import SocialMedia from "../components/SocialMedia.svelte"
+	import { content, socialMedia } from "../content/about.js"
 	interface Link {
 		ready: boolean,
 		name: string,
 		destination: string,
 	}
-	function newLink(name: string, destination: string, ready=false): Link {
-		return {
-			name,
-			destination,
-			ready,
-		}
-	}
-	const links: Link[] = [
-		newLink(
-			"Blog",
-			"/blog",
-			false
-		),
-		newLink(
-			"Work Experience",
-			"/work",
-			false
-		),
-		newLink(
-			"Contact Me",
-			"/contact",
-			false
-		)
-	]
-
-
-
-
+	const links: Link[] = []
 	const constructionIcon = 'fa-solid fa-traffic-cone'
 
 
@@ -47,11 +21,18 @@
 </svelte:head>
 
 
-<div class="flex flex-col items-center text-[#e0e1dd] w-screen md:w-1/2 md:mx-auto lg:w-1/4">
-	<div class="my-5 p-3 border rounded-md bg-[#1B263B] text-[#e0e1dd]">
+<div class="flex flex-col items-center text-[#e0e1dd] w-screen md:w-1/2 lg:w-1/4 md:m-auto">
+	<div class="p-3 border rounded-t-md bg-[#1B263B] text-[#e0e1dd]">
 		<h1 class="text-4xl font-pressstart  text-center">Yannick Dorn</h1> 
 	</div>
-	<div class="square-color px-2 border rounded-md">
+	{#if socialMedia.length > 0}
+		<div class="flex flex-row">
+			{#each socialMedia as media}
+				<div class="px-12 py-4 hover:bg-[#e0e1dd] hover:text-[#1b263b]"><Icon faSource={media.icon}/></div>
+			{/each}
+		</div>
+	{/if}
+	<div class="square-color px-2 border rounded-b-md">
 		<div class="grid grid-cols-1 font-inconsolata text-xl">
 			{#each content as line}
 			<p class="p-1">{line}</p>

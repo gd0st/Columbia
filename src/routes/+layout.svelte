@@ -9,7 +9,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@500&family=Press+Start+2P&display=swap" rel="stylesheet">
 	</svelte:head>
 	<!-- <Navigator/> -->
-	<slot></slot>
+	<div class="flex h-screen">
+		<slot></slot>
+	</div>
 <style>
 
 	:global(body) {
