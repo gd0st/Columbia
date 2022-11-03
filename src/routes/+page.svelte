@@ -29,7 +29,7 @@
 		<!-- <div class="flex flex-row box-border w-full"> -->
 			<nav>
 				<ul class="flex flex-row box-border w-full">
-				{#each socialMedia as media}
+			{#each socialMedia as media}
 
 					<li class="w-1/3 border-x border-dashed">
 						<a href="{media.hyperlink}">
@@ -38,14 +38,14 @@
 							</div>
 						</a>
 					</li>
-			<nav>
 			<!-- <a href="{media.hyperlink}">
 					<div class="text-center border-x border-dashed p-5 hover:bg-[#e0e1dd] hover:text-[#1b263b] w-1/3">
 							<Icon faSource={media.icon}/>
 					</div>
 			</a> -->
 			{/each}
-			</ul>
+				</ul>
+			</nav>
 		<!-- </div> -->
 	{/if}
 	<div class="square-color px-2 border rounded-br-md">
