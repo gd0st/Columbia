@@ -83,11 +83,7 @@
 			{/each}
 		</ul>
 	</div>
-	{#if socialMedia.length > 0}
-		<!-- <div class="flex flex-row box-border w-full"> -->
-		<!-- </div> -->
-	{/if}
-	<div class="text-right text-xs underline italic opacity-1/2">
+	<div class="text-right text-xs underline italic opacity-1/2 bg-[#0d1b2a]">
 		<a href="https://github.com/2mill/Columbia">
 			<p class="text-right">Source Code</p>
 		</a>
