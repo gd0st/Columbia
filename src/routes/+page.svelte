@@ -28,21 +28,40 @@
 	<title>Yannick Dorn</title>
 </svelte:head>
 
-<div class="grid grid-cols-1 items-center text-[#e0e1dd] w-screen md:w-1/3 lg:w-1/4 m-auto">
-	<div class="p-3 border rounded-tl-md bg-[#1B263B] text-[#e0e1dd]">
+<div class="grid grid-cols-1 items-center text-[#e0e1dd] bg-[#1B263B] w-screen md:w-1/3 lg:w-1/4 m-auto relative">
+	<div class="p-3 border rounded-tl-md  text-[#e0e1dd] border-b-0">
 		<h1 class="text-4xl font-pressstart  text-center">Yannick Dorn</h1>
 	</div>
 
-	<ul class="flex flex-row text-center box-border w-full">
-		{#each links as link}
-			<li class="hover:bg-[#e0e1dd] hover:text-[#1b263b] w-full">
-				<a href={link.destination} class="">
-					<p>{link.name}</p>
-				</a>
-			</li>
-		{/each}
-	</ul>
-	<div class="square-color px-2 border rounded-br-md">
+
+
+
+	<div class="flex flex-row">
+		<div class="border-l border-r grid grid-cols-1 w-1/6">
+			<div class="">
+			</div>
+			<div class="border-t">
+			</div>
+		</div>
+		<div class="w-4/6 border-y">
+			<ul class="flex flex-row text-center box-border justify-center w-full">
+				{#each links as link}
+					<li class="hover:bg-[#e0e1dd] hover:text-[#1b263b] w-full border-r">
+						<a href={link.destination} class="">
+							<p>{link.name}</p>
+						</a>
+					</li>
+				{/each}
+			</ul>
+		</div>
+		<div class="border-r grid grid-cols-1 w-1/6">
+			<div class="">
+			</div>
+			<div class="border-t">
+			</div>
+		</div>
+	</div>
+	<div class="square-color px-2 border rounded-br-md border-t-0">
 		<div class="grid grid-cols-1 font-inconsolata text-xl">
 			{#each content as line}
 				<p class="p-1">{line}</p>
@@ -64,11 +83,7 @@
 			{/each}
 		</ul>
 	</div>
-	{#if socialMedia.length > 0}
-		<!-- <div class="flex flex-row box-border w-full"> -->
-		<!-- </div> -->
-	{/if}
-	<div class="text-right text-xs underline italic opacity-1/2">
+	<div class="text-right text-xs underline italic opacity-1/2 bg-[#0d1b2a]">
 		<a href="https://github.com/2mill/Columbia">
 			<p class="text-right">Source Code</p>
 		</a>
