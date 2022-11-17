@@ -1,38 +1,42 @@
-# create-svelte
+# ydorn.com
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+Hello,
 
-## Creating a project
+I made the majority of this, but feel free to use it.
 
-If you're seeing this, you've probably already done this step. Congrats!
+If you'd like to credit me, please do.
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+If you find code that I didn't write and has been credited to someone else, you **must** include that credit in your own source.
+You **cannot** credit me for code that I **explicetly** did not write myself!
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+# How to build and run
 
-## Developing
+Requires node v19, but it might work with v18.
+Copy the repository.
+Run `npm i`
+Run `npm run dev` for the development environment.
+Run `npm run build` for the build deployment.
+Use `docker build` if you want to deploy it as a container.
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
 
-```bash
-npm run dev
+# What does it use?
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+The backend is a nodejs application using the Svelte.JS framework.
+The front end tailwind, but also has support for SASS.
+I use typescript which is a superset of javascript.
 
-## Building
+Docker for building and deploying the website.
+My website uses nginx as a webserver and as a reverse proxy for the docker container.
 
-To create a production version of your app:
 
-```bash
-npm run build
-```
+# Roadmap
 
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
++ [x] Color pallete and layout
++ [x] Navigation bar
++ [x] Content
++ [x] Reactive
++ [ ] Blog page
++ [ ] Modularity
++ [ ] Contact Me section
++ [ ] Swapable color pallete
++ [ ] Glowing background
