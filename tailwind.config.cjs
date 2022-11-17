@@ -8,6 +8,13 @@ module.exports = {
 			'inconsolata': ["Inconsolata", 'cursive']
 		}
 	},
+
+	colors: {
+		'mirage': '#0d1b2a',
+		'dark': '#1b263b',
+		'pearlBush': '#e0e1dd'
+
+	}
   },
   plugins: [],
 }

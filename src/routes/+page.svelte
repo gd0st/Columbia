@@ -1,6 +1,7 @@
 <script lang="ts">
 	import Icon from '../components/Icon.svelte';
 	import { content, socialMedia } from '../content/about.js';
+	import  Header from "../components/Header.svelte";
 	interface Link {
 		ready: boolean;
 		name: string;
@@ -17,21 +18,28 @@
 		{
 			ready: false,
 			name: 'blog',
-			destination: '/',
+			destination: '/blog',
 			selected: false
 		}
 	];
 	const constructionIcon = 'fa-solid fa-traffic-cone';
+
+	const headerMeta = {
+		content: 'Yannick Dorn',
+		font: 'pressstart'
+	}
 </script>
 
 <svelte:head>
 	<title>Yannick Dorn</title>
 </svelte:head>
 
-<div class="grid grid-cols-1 items-center text-[#e0e1dd] bg-[#1B263B] w-screen md:w-1/3 lg:w-1/4 m-auto relative">
-	<div class="p-3 border rounded-tl-md  text-[#e0e1dd] border-b-0">
-		<h1 class="text-4xl font-pressstart  text-center">Yannick Dorn</h1>
-	</div>
+
+
+	<!-- <div class="p-3 border rounded-tl-md  text-[#e0e1dd] border-b-0"> -->
+		<!-- <h1 class="text-4xl font-pressstart  text-center">Yannick Dorn</h1> -->
+		<Header headerMeta={headerMeta}/>
+	<!-- </div> -->
 
 
 
@@ -88,7 +96,6 @@
 			<p class="text-right">Source Code</p>
 		</a>
 	</div>
-</div>
 
 <style>
 	.square-color {
