@@ -1,8 +1,8 @@
-FROM node:18.7.0
+FROM node:19.1.0
 WORKDIR /app
-COPY package*.json .
+COPY package*.json ./
 RUN npm ci
-COPY . .
+COPY . ./
 RUN npm run build
 RUN npm prune --production
 
@@ -15,6 +15,6 @@ WORKDIR /app
 # Copied from node18 to 18-bullseye
 COPY --from=0 /app/build build/
 COPY --from=0 /app/node_modules node_modules/
-COPY package*.json .
+COPY package*.json ./
 EXPOSE 3000
 CMD ["node", "build"]
