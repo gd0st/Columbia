@@ -1,7 +1,17 @@
 <script lang="ts">
 	import Icon from '../components/Icon.svelte';
+	import Content from "../lib/Content.svelte"
 	import { content, socialMedia } from '../content/about.js';
 	import  Header from "../components/Header.svelte";
+	import { infoContent } from '../stores';
+	import type { HeaderContent } from '$lib/structs';
+	export let data;
+
+	let main_content: string[] = data.text_data;
+
+
+
+
 	interface Link {
 		ready: boolean;
 		name: string;
@@ -24,26 +34,17 @@
 	];
 	const constructionIcon = 'fa-solid fa-traffic-cone';
 
-	const headerMeta = {
+	const headerContent: HeaderContent = {
 		content: 'Yannick Dorn',
 		font: 'pressstart'
 	}
 
-	async function getIndexParagraphs() {
-		const request = await fetch('/', {
-			method: 'GET',
-			headers: {
-				'content-type': 'application/json',
-				'cache-control': 'public, max-age=3600'
-			}
-		})
+	let mainContet = ""
 
-		const data = await request.json()
-		console.log(data)
+	let contentReactor = infoContent.subscribe(
+		value => mainContet = value
+	)
 
-		return data.text_data
-
-	}
 
 </script>
 
@@ -52,7 +53,7 @@
 </svelte:head>
 	<!-- <div class="p-3 border rounded-tl-md  text-[#e0e1dd] border-b-0"> -->
 		<!-- <h1 class="text-4xl font-pressstart  text-center">Yannick Dorn</h1> -->
-		<Header headerMeta={headerMeta}/>
+		<Header headerMeta={headerContent}/>
 	<!-- </div> -->
 
 
@@ -85,17 +86,10 @@
 	</div>
 	<div class="square-color px-2 border rounded-br-md border-t-0">
 		<div class="grid grid-cols-1 font-inconsolata text-xl">
-			{#await getIndexParagraphs()}
-
-			<p>Loading Content...</p>
-				
-			{:then text_data} 
-				{#each text_data as line}
-					<p class="p-1">{line}</p>
-					
-				{/each}
-				
-			{/await}
+			<Content/>
+			{#each main_content as line}
+				<p class="p-1">{line}</p>
+			{/each}
 		</div>
 		<ul class="flex flex-row box-border w-full">
 			{#each socialMedia as media}

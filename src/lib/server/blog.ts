@@ -9,9 +9,3 @@ export async function getMeta(endpoint: URL) {
 	let data = await res.json()
 	return data
 }
-
-
-
-
-
-
