@@ -7,14 +7,14 @@
 		source: "fizz",
 		title: "buzz",
 		publicationDate: new Date(Date.now()),
-		link: new URL('https://ydorn.com/')
+		link: 'https://ydorn.com/',
 	};
 
 </script>
 
 
-<a href="something" title="{post.title}">
-	<p>
+<a href="{post.link}" title="{post.title}">
+	<p class="truncate">
 		{post.title}
 	</p>
 	<p>
