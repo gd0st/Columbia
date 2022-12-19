@@ -1,53 +1,32 @@
 <script lang="ts">
 	import type { NewsArticle } from "$lib/articles/articles";
 	import Article from "$lib/articles/Article.svelte";
-	export let data;
+	// export let data;
 
 	const articleLimit = 10;
 
-	let articles: NewsArticle[] = data.feed_data;
+	// let feeds: NewsArticle[][] = data.feed_data;
 
-	function padAZero(time: string) {
-		if (time.length == 1) return '0' + time;
-		return time;
-	}
-	function formatTime(date: Date, ifs=":"): string {
-		const time_items = [
-			date.getHours(),
-			padAZero(date.getMinutes().toString()),
-		]
+	//date class is not getting the day properly for some reason...
 
-		return time_items.join(ifs)
-	}
-	function formatYearMonthDay(date: Date, ifs="/"): string {
-		const things = [
-			padAZero(date.getMonth().toString()),
-			padAZero(date.getDay().toString()),
-			date.getFullYear(),
-		]
-		return things.join(ifs)
-	}
-	function formatDate(date: Date, IFS='-', dateIFS='/', timeIFS=":") {
-		const date_items = [
-			date.getMonth(),
-			date.getDay(),
-			date.getFullYear()
-		]
-		const time_items = [
-			date.getHours(),
-			
-		]
-		const day = formatYearMonthDay(date, dateIFS);
-		let minutes = formatTime(date, timeIFS);
-		return [day, minutes].join(' - ');
-	}
+	//need some sort of shuffeling algorithm that will determine how to 
+	//organize the feed.
+	let date_formatted = (article: NewsArticle) => article.source != 'ycombinator';
+
+	let placeholder: NewsArticle[] = [{
+		title: "🚧 Under Construction 🚧",
+		link: "/feed",
+		source: "ydorn.com",
+		publicationDate: new Date(Date.now())
+	}];
+	let feeds = placeholder;
+
 </script>
 
-
 <ul>
-	{#each articles.slice(0,10) as article}
-		<li class="truncate p-2 m-2 border">
-			<Article post={article}/>
+	{#each feeds as article}
+		<li class="p-2 m-2 border">
+			<Article post={article} date_formatted={date_formatted(article)}/>
 		</li>
 	{/each}
 </ul>
